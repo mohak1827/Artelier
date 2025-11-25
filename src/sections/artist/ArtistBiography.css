@@ -1,0 +1,50 @@
+.bio-container {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+}
+
+.bio-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.bio-title::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 60%;
+  height: 4px;
+  background: linear-gradient(90deg, #4b5563, #9ca3af);
+  border-radius: 2px;
+}
+
+.bio-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #4b5563;
+  white-space: pre-line;
+}
+
+.read-more-btn {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  background: none;
+  border: none;
+  padding: 5px 0;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: color 0.2s ease;
+}
+
+.read-more-btn:hover {
+  color: #4b5563;
+}

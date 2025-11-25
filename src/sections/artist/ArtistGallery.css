@@ -1,0 +1,90 @@
+.gallery-showcase-horizontal {
+  padding: 4rem 3rem;
+  background:
+    linear-gradient(135deg, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.88)),
+    url('https://img.freepik.com/free-photo/back-school-decoration-with-paint-brushes-space_23-2147662339.jpg?semt=ais_hybrid&w=740&q=80');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.gallery-title-horizontal {
+  text-align: left;
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  color: #f9fafb;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+}
+
+.art-scroll-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.art-horizontal-scroll {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 1rem 0;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.5) transparent;
+  -webkit-overflow-scrolling: touch;
+}
+
+.art-horizontal-scroll > * {
+  flex-shrink: 0;
+}
+
+.art-horizontal-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.art-horizontal-scroll::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 4px;
+}
+
+.art-horizontal-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #4b5563 0%, #6b7280 100%);
+  border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .gallery-showcase-horizontal {
+    padding: 3rem 0;
+  }
+
+  .gallery-title-horizontal {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+  }
+
+  .art-horizontal-scroll {
+    gap: 1.5rem;
+    padding: 1rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-showcase-horizontal {
+    padding: 2rem 0;
+  }
+
+  .gallery-title-horizontal {
+    font-size: 1.75rem;
+    padding: 0 1rem;
+  }
+
+  .art-horizontal-scroll {
+    gap: 1rem;
+    padding: 1rem 1rem;
+  }
+}

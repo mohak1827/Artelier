@@ -1,0 +1,40 @@
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.no-results-message {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: #6B6B6B;
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #FAF8F3;
+  border-radius: 12px;
+  margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    padding: 1rem 0;
+  }
+  
+  .no-results-message {
+    font-size: 20px;
+    padding: 3rem 1.5rem;
+  }
+}

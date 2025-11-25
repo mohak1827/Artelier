@@ -1,0 +1,41 @@
+/* src/pages/ArtistPage.css */
+
+.artist-page-container {
+  max-width: 100%;
+  /* margin: 20px auto; Center the page */
+  /* padding: 20px; */
+  background: linear-gradient(135deg, #f5f5f5 0%, #e5e7eb 100%); /* Neutral light background */
+  color: #0f172a; /* dark text for outer areas */
+  min-height: 100vh;
+  padding: 3rem 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* This creates a responsive 2-column grid.
+  '1fr' means the left column takes 1 "fraction" of space.
+  '350px' means the right column is fixed at 350px width.
+  On smaller screens, it will stack.
+*/
+.main-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 350px; /* Main column | Sidebar column */
+  gap: 30px;
+  margin-bottom: 30px;
+  align-items: start; /* Aligns items to the top of their grid cell */
+}
+
+/* Responsive behavior */
+@media (max-width: 900px) {
+  .main-content-grid {
+    /* Stack the columns on top of each other */
+    grid-template-columns: 1fr; 
+  }
+
+  
+}
+
+@media (max-width: 600px) {
+  .artist-page-container {
+    padding: 10px;
+  }
+}

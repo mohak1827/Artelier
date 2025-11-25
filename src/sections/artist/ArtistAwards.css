@@ -1,0 +1,63 @@
+.awards-container {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.awards-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.awards-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.award-item {
+  display: flex;
+  align-items: center;
+  background: #f9fafb;
+  padding: 15px 20px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.award-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.award-icon {
+  font-size: 1.8rem;
+  color: #4b5563;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.award-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.award-name {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.award-issuer {
+  font-size: 0.95rem;
+  color: #9ca3af;
+  font-style: italic;
+}

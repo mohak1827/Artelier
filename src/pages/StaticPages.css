@@ -1,0 +1,353 @@
+/* Static Pages - Shared Styles */
+
+.static-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f9fafb 0%, #e5e7eb 100%);
+}
+
+/* Hero Section */
+.static-hero {
+  background: linear-gradient(135deg, #171717 0%, #262626 100%);
+  color: #FFFFFF;
+  padding: 5rem 3rem;
+  text-align: center;
+  border-bottom: 3px solid #4b5563;
+}
+
+.static-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 56px;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  background: linear-gradient(135deg, #f9fafb 0%, #d1d5db 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.static-hero p {
+  font-size: 20px;
+  color: #e5e7eb;
+  margin: 0;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Content Section */
+.static-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 3rem;
+}
+
+.content-section {
+  margin-bottom: 4rem;
+}
+
+.content-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: #171717;
+  margin: 0 0 1.5rem 0;
+}
+
+.content-section p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #6B6B6B;
+  margin: 0 0 1.5rem 0;
+}
+
+/* Mission Grid */
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.mission-card {
+  background: #FFFFFF;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.mission-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.mission-icon {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.mission-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: #171717;
+  margin: 0 0 0.75rem 0;
+}
+
+.mission-card p {
+  font-size: 15px;
+  color: #6B6B6B;
+  margin: 0;
+}
+
+/* Features List */
+.features-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature-item {
+  background: #FFFFFF;
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 4px solid #9ca3af;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.feature-item h3 {
+  font-size: 20px;
+  color: #171717;
+  margin: 0 0 0.75rem 0;
+}
+
+.feature-item p {
+  font-size: 15px;
+  color: #6B6B6B;
+  margin: 0;
+}
+
+/* CTA Section */
+.cta-section {
+  background: #FFFFFF;
+  padding: 3rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.cta-btn {
+  padding: 1rem 2.5rem;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.cta-btn.primary {
+  background: linear-gradient(135deg, #f9fafb 0%, #d1d5db 100%);
+  color: #111827;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+}
+
+.cta-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(212, 175, 55, 0.4);
+}
+
+.cta-btn.secondary {
+  background: transparent;
+  border: 2px solid #9ca3af;
+  color: #4b5563;
+}
+
+.cta-btn.secondary:hover {
+  background: rgba(156, 163, 175, 0.12);
+  transform: translateY(-2px);
+}
+
+/* Contact Form */
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto 0;
+  background: #FFFFFF;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #171717;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid rgba(156, 163, 175, 0.5);
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4b5563;
+  box-shadow: 0 0 0 3px rgba(148, 163, 184, 0.35);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #f9fafb 0%, #d1d5db 100%);
+  color: #111827;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.25);
+}
+
+/* Contact Info Grid */
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-info-card {
+  background: #FFFFFF;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.contact-icon {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.contact-info-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: #171717;
+  margin: 0 0 0.5rem 0;
+}
+
+.contact-info-card p {
+  font-size: 15px;
+  color: #6B6B6B;
+  margin: 0;
+}
+
+/* FAQ Section */
+.faq-list {
+  max-width: 800px;
+  margin: 2rem auto 0;
+}
+
+.faq-item {
+  background: #FFFFFF;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.faq-question {
+  font-size: 20px;
+  font-weight: 600;
+  color: #171717;
+  margin: 0 0 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.faq-question::before {
+  content: 'Q:';
+  color: #9ca3af;
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+}
+
+.faq-answer {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #6B6B6B;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .static-hero {
+    padding: 4rem 2rem;
+  }
+  
+  .static-hero h1 {
+    font-size: 42px;
+  }
+  
+  .static-content {
+    padding: 3rem 2rem;
+  }
+  
+  .mission-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .features-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) {
+  .static-hero h1 {
+    font-size: 32px;
+  }
+  
+  .static-hero p {
+    font-size: 16px;
+  }
+  
+  .content-section h2 {
+    font-size: 28px;
+  }
+}

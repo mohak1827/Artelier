@@ -1,0 +1,143 @@
+.join-section {
+  padding: 4rem 1.5rem;
+  background: linear-gradient(135deg, #020617 0%, #111827 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  max-width: 960px;
+  margin: 3rem auto;
+  border-radius: 32px;
+}
+
+.join-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: movePattern 20s linear infinite;
+}
+
+@keyframes movePattern {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
+
+.join-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  padding: 0 2rem;
+}
+
+.join-card {
+  background: rgba(15, 23, 42, 0.9);
+  padding: 3rem;
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.join-card h3 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #e5e7eb;
+}
+
+.join-card p {
+  margin-bottom: 2.5rem;
+  font-size: 1.2rem;
+  opacity: 1;
+  color: #e5e7eb;
+  line-height: 1.8;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.join-btn {
+  background: #020617;
+  color: #f9fafb;
+  padding: 1.5rem 4rem;
+  border: none;
+  border-radius: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.join-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .join-section {
+    padding: 3rem 1rem;
+    margin: 2rem 1rem;
+  }
+
+  .join-container {
+    padding: 0 1rem;
+  }
+
+  .join-card {
+    padding: 2rem;
+  }
+
+  .join-card h3 {
+    font-size: 2rem;
+  }
+
+  .join-card p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .join-btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .join-section {
+    padding: 2rem 0.5rem;
+    margin: 1.5rem 0.5rem;
+    border-radius: 20px;
+  }
+
+  .join-container {
+    padding: 0 0.5rem;
+  }
+
+  .join-card {
+    padding: 1.5rem;
+    border-radius: 20px;
+  }
+
+  .join-card h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .join-card p {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .join-btn {
+    padding: 0.875rem 1.75rem;
+    font-size: 0.95rem;
+    width: 100%;
+    max-width: 280px;
+  }
+}

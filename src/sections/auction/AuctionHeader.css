@@ -1,0 +1,27 @@
+.auction-header {
+  text-align: center;
+  padding: 60px 20px;
+
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDb1R23i2inRu5avKVAvZ0O_ST6-w1RM2HFA&s");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-bottom: 1px solid #ddd;
+}
+
+.auction-header-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-family: 'Garamond', 'Times New Roman', serif;
+}
+
+.auction-header-description {
+  font-size: 1.15rem;
+  color: #34495e;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}

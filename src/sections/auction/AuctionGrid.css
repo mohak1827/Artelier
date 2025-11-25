@@ -1,0 +1,40 @@
+.auction-grid-container {
+  padding: 40px 5%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.auction-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+}
+
+@media (max-width: 1200px) {
+  .auction-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .auction-grid-container {
+    padding: 30px 3%;
+  }
+  
+  .auction-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .auction-grid-container {
+    padding: 20px 4%;
+  }
+  
+  .auction-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+}

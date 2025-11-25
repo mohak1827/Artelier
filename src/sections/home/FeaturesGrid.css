@@ -1,0 +1,56 @@
+.features-fullwidth {
+  padding: 4rem 2rem;
+  background: #ffffff;
+
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.features-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center; /* Centers the cards with equal spacing */
+}
+
+.features-grid > * {
+  flex: 0 1 calc(25% - 1.5rem); /* 4 cards per row on desktop */
+  min-width: 260px;
+}
+
+/* 3 columns on large tablets / small desktops */
+@media (max-width: 1200px) {
+  .features-grid > * {
+    flex: 0 1 calc(33.333% - 1.5rem);
+    min-width: 220px;
+  }
+}
+
+/* 2 columns on tablets and mobile */
+@media (max-width: 768px) {
+  .features-fullwidth {
+    padding: 3rem 1.25rem;
+  }
+
+  .features-grid {
+    gap: 1.5rem;
+  }
+
+  .features-grid > * {
+    flex: 0 1 calc(50% - 0.75rem);
+    min-width: 0;
+  }
+}
+
+/* Still 2 columns on very small phones, just adjust padding */
+@media (max-width: 480px) {
+  .features-fullwidth {
+    padding: 2.5rem 0.75rem;
+  }
+
+  .features-grid {
+    gap: 1.25rem;
+  }
+}
