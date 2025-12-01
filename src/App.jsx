@@ -33,6 +33,7 @@ import FavArtists from './sections/user/FavArtists';
 import Orders from './sections/user/Orders'; 
 import PaymentPage from './pages/payment/PaymentPage'; 
 import AdminDashboard from './pages/admin/AdminDashboard';
+import ScrollToTop from './ScrollToTop';
 
 import './App.css';
 
@@ -79,6 +80,7 @@ const App = () => {
       <FavoritesProvider>
         <NotificationProvider>
           <Router>
+            <ScrollToTop />
             <div className="app">
             
           

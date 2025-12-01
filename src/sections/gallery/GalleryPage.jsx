@@ -1,4 +1,6 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
 import GalleryHeader from './GalleryHeader';
 import GalleryFilter from './GalleryFilter';
 import GalleryGrid from './GalleryGrid';
@@ -12,6 +14,7 @@ const ITEMS_PER_PAGE = 12;
 const GalleryPage = () => {
   const { user, openModal } = useAuth();
   const { showNotification } = useNotification();
+  const location = useLocation();
 
   const [filters, setFilters] = useState({
     price: 'all',
@@ -21,6 +24,10 @@ const GalleryPage = () => {
   
   const [visibleCount, setVisibleCount] = useState(ITEMS_PER_PAGE);
   const [wishlist, setWishlist] = useState([]);
+
+  const searchParams = new URLSearchParams(location.search);
+  const rawSearch = searchParams.get('search') || '';
+  const searchTerm = rawSearch.trim().toLowerCase();
 
   const handleToggleWishlist = (artworkId) => {
     if (!user) {
@@ -54,10 +61,18 @@ const GalleryPage = () => {
       if (filters.type !== 'all' && artwork.type !== filters.type) {
         return false;
       }
-      
+
+      if (searchTerm) {
+        const inTitle = artwork.title.toLowerCase().includes(searchTerm);
+        const inArtist = artwork.artistName.toLowerCase().includes(searchTerm);
+        if (!inTitle && !inArtist) {
+          return false;
+        }
+      }
+
       return true;
     });
-  }, [filters]);
+  }, [filters, searchTerm]);
 
   const displayedArtworks = filteredArtworks.slice(0, visibleCount);
 
@@ -68,6 +83,10 @@ const GalleryPage = () => {
     }));
     setVisibleCount(ITEMS_PER_PAGE);
   };
+
+  useEffect(() => {
+    setVisibleCount(ITEMS_PER_PAGE);
+  }, [searchTerm]);
 
   const handleViewMore = () => {
     setVisibleCount(prevCount => prevCount + ITEMS_PER_PAGE);

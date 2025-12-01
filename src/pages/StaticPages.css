@@ -11,7 +11,14 @@
   color: #FFFFFF;
   padding: 5rem 3rem;
   text-align: center;
-  border-bottom: 3px solid #4b5563;
+  position: relative;
+  height: 360px;
+  min-height: 360px;
+  max-width: 1400px;
+  width: 95%;
+  margin: 0 auto 4rem auto;
+  border-radius: 16px;
+  overflow: hidden;
 }
 
 .static-hero h1 {

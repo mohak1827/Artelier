@@ -5,13 +5,20 @@
 
 .auction-hero {
   background:
-    linear-gradient(135deg, rgba(23, 23, 23, 0.95) 0%, rgba(38, 38, 38, 0.98) 100%),
-    url('https://images.unsplash.com/photo-1526481280695-3c687fd543c0?auto=format&fit=crop&w=1600&q=80&sat=-100');
+    url('https://media.istockphoto.com/id/1290914940/photo/gavel-on-the-black-table.jpg?s=612x612&w=0&k=20&c=0qjQ2YuBsnI3K5f5DOsZ38yrR7rWbq7RlJAjtAp2wqk=');
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 360px;
+  min-height: 360px;
+  max-width: 1400px;
+  width: 95%;
+  margin: 0 auto 4rem auto;
   padding: 5rem 3rem;
   text-align: center;
-  border-bottom: 3px solid #4b5563;
+  border-radius: 16px;
+  overflow: hidden;
 }
 
 .auction-hero h1 {

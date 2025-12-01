@@ -34,7 +34,7 @@ const AuctionPage = () => {
   return (
     <div className="auction-page">
       <div className="auction-hero">
-        <h1>Art Auctions</h1>
+        <h1>Artelier Auctions</h1>
         <p>Bid on exclusive artworks from renowned artists worldwide</p>
       </div>
 

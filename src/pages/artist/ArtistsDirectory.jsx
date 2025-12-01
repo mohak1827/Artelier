@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
+import { useLocation } from 'react-router-dom';
+
 import ArtistCard from '../../components/ArtistCard';
 import { artistsData } from '../../artistsData';
 import { allArtworks } from '../../sections/gallery/mockGalleryData';
@@ -8,11 +10,30 @@ import './ArtistsDirectory.css';
 const ArtistsDirectory = () => {
   const [activeFilter, setActiveFilter] = useState('All');
 
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const rawSearch = searchParams.get('search') || '';
+  const searchTerm = rawSearch.trim().toLowerCase();
+
   const categories = ['All', ...new Set(artistsData.map(artist => artist.category))];
 
-  const filteredArtists = activeFilter === 'All' 
-    ? artistsData 
-    : artistsData.filter(artist => artist.category === activeFilter);
+  const filteredArtists = useMemo(() => {
+    const byCategory = activeFilter === 'All' 
+      ? artistsData 
+      : artistsData.filter(artist => artist.category === activeFilter);
+
+    if (!searchTerm) {
+      return byCategory;
+    }
+
+    return byCategory.filter(artist => {
+      const nameMatch = artist.name.toLowerCase().includes(searchTerm);
+      const specialtyMatch = artist.specialty.toLowerCase().includes(searchTerm);
+      const categoryMatch = artist.category.toLowerCase().includes(searchTerm);
+      const locationMatch = artist.location.toLowerCase().includes(searchTerm);
+      return nameMatch || specialtyMatch || categoryMatch || locationMatch;
+    });
+  }, [activeFilter, searchTerm]);
 
   return (
     <div className="directory-page">

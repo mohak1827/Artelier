@@ -40,8 +40,10 @@
   transition: all 0.3s ease;
 }
 
-.navbar-logo-link:hover {
-  transform: translateY(-2px);
+.navbar-logo-image {
+  height: 25px;
+  width: 30px;
+  object-fit: contain;
 }
 
 .navbar-logo-icon {
