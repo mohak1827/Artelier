@@ -23,7 +23,7 @@ const PaymentPage = () => {
     }
 
     const amount = total.replace(/[^0-9.]/g, '');
-    const upiId = "9045033734@rapl";
+    const upiId = "8295190177@ybl";
     const payeeName = "Artelier Gallery";
     
     const upiString = `upi://pay?pa=${upiId}&pn=${encodeURIComponent(payeeName)}&am=${amount}&cu=INR`;
